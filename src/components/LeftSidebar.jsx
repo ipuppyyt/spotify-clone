@@ -3,7 +3,7 @@ import { HomeIcon, LibraryIcon, SearchIcon } from '../assets/icons';
 
 function Sidebar() {
     return (
-        <div className="bg-black text-white p-2 w-[20%] text-xs min-h-[100vh]">
+        <div className="bg-black text-white p-2 w-full sm:w-[20%] text-xs min-h-[100vh]">
 
             <div className='space-y-2 min-h-[97vh]'>
 
@@ -18,13 +18,14 @@ function Sidebar() {
                     </div>
                 </div>
 
-                <div className='flex flex-col space-y-2 w-full   items-center px-3 p-3 rounded-lg bg-[#121212]'>
+                <div className='flex flex-col space-y-2 w-full items-center px-3 p-3 rounded-lg bg-[#121212]'>
                     <div className='flex flex-row w-full px-2 space-x-3 cursor-default'>
                         <LibraryIcon height={18} width={18} color='#fff' />
                         <span className='font-gotham-bold'>Your Library</span>
                     </div>
 
                     <div className='w-full h-full'>
+                        {/* Placeholder for content */}
                         sasdas
                     </div>
                 </div>
