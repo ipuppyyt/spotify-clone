@@ -3,7 +3,7 @@ import { FavouriteIcon } from '../assets/icons';
 
 const RightSidebar = () => {
     return (
-        <section className='w-full sm:w-[20%] bg-black p-2'>
+        <section className='w-full sm:w-[20%] md:w-[30%] bg-black p-2'>
             <div className='px-1 bg-[#121212] h-full flex flex-col rounded-lg'>
                 <div className='rounded-lg py-1'>
                     <img

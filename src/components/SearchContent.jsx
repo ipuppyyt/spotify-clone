@@ -4,7 +4,7 @@ import Header from './Header';
 
 function SearchContent() {
     return (
-        <section className='bg-[#121212] w-full my-3 rounded-lg px-5'>
+        <section className='bg-[#121212] w-full my-2 rounded-lg px-5'>
 
             <Header />
         </section>

@@ -25,13 +25,13 @@ function MainContent() {
             <Header />
 
             <div className='flex flex-row gap-1'>
-                <Link to='/'>
+                <Link draggable='false' to='/'>
                     <Checkbox checked={isChecked('all')} id='all' label='All' />
                 </Link>
-                <Link to='/home?facet=music-chip'>
+                <Link draggable='false' to='/home?facet=music-chip'>
                     <Checkbox checked={isChecked('music-chip')} id='music' label='Music' />
                 </Link>
-                <Link to='/home?facet=podcasts-chip'>
+                <Link draggable='false' to='/home?facet=podcasts-chip'>
                     <Checkbox checked={isChecked('podcasts-chip')} id='podcasts' label='Podcasts' />
                 </Link>
             </div>

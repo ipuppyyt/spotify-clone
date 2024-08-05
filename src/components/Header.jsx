@@ -50,7 +50,7 @@ const Header = () => {
 
             <div className='flex items-center gap-1'>
                 <Tooltip title='What&apos;s New' placement='bottom'>
-                    <Link to="/content-feed" className='bg-opacity-50 rounded-full p-[1px]'>
+                    <Link draggable='false' to="/content-feed" className='bg-opacity-50 rounded-full p-[1px]'>
                         <BellIcon width={24} height={24} color='#fff' />
                     </Link>
                 </Tooltip>
@@ -68,7 +68,7 @@ const Header = () => {
                             '& .MuiMenu-paper': {
                                 backgroundColor: '#242424',
                                 color: '#fff',
-                                borderRadius: '3px',
+                                borderRadius: '5px',
                                 marginTop: '8px',
                                 width: '150px',
                             },
@@ -77,24 +77,22 @@ const Header = () => {
                         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                     >
                         <div className='p-1 font-gotham-bold text-xs'>
-                            <a href='https://www.spotify.com/in-en/account/overview/?utm_source=spotify&utm_medium=menu&utm_campaign=your_account' target='_blank' className='flex items-center justify-between hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2'>
+                            <a draggable='false' href='https://www.spotify.com/in-en/account/overview/?utm_source=spotify&utm_medium=menu&utm_campaign=your_account' target='_blank' className='flex items-center justify-between rounded-md hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2'>
                                 <span>Account</span>
                                 <NewTabIcon width={20} height={20} color='#fff' />
                             </a>
 
-                            <button className='flex items-center justify-between hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2' onClick={() => logout()}>
+                            <button className='flex items-center justify-between rounded-md hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                                 <span>Profile</span>
                             </button>
 
-                            <button className='flex items-center justify-between hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2' onClick={() => logout()}>
+                            <button className='flex items-center justify-between rounded-md hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                                 <span>Settings</span>
                             </button>
 
                             <Divider sx={{ marginY: '5px', backgroundColor: '#8a8a8a' }} />
 
-                            <button className='flex items-center justify-between hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2' onClick={() => logout(
-                                { returnTo: window.location.origin }
-                            )}>
+                            <button className='flex items-center justify-between rounded-md hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                                 <span>Log out</span>
                             </button>
                         </div>
