@@ -1,19 +1,45 @@
 // components/MainContent.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Checkbox } from '../ui';
+import { Link, useLocation } from 'react-router-dom';
+import Header from './Header';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function MainContent() {
+    const location = useLocation(); // Get the current location
+    const [selectedFacet, setSelectedFacet] = useState('all');
+
+    const { user } = useAuth0();
+
+    useEffect(() => {
+        const query = new URLSearchParams(location.search);
+        const facet = query.get('facet') || 'all'; // Default to 'all' if no facet is found
+        setSelectedFacet(facet);
+    }, [location.search]); // Depend on location.search to trigger on URL changes
+
+    const isChecked = (facet) => selectedFacet === facet;
+
     return (
-        <div className="flex-grow bg-gray-800 text-white p-4">
-            <h2 className="text-xl font-bold mb-4">Playlists</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div className="bg-gray-700 rounded-lg p-4 hover:bg-gray-600">
-                    <img src="playlist-thumbnail.jpg" alt="Playlist Thumbnail" className="rounded-lg mb-2" />
-                    <h3 className="font-bold">Playlist Name</h3>
-                    <p className="text-gray-400">Artist Name</p>
-                </div>
-                {/* Add more playlist items */}
+        <section className='bg-[#121212] w-full my-2 rounded-lg px-5'>
+
+            <Header />
+
+            <div className='flex flex-row gap-1'>
+                <Link to='/'>
+                    <Checkbox checked={isChecked('all')} id='all' label='All' />
+                </Link>
+                <Link to='/home?facet=music-chip'>
+                    <Checkbox checked={isChecked('music-chip')} id='music' label='Music' />
+                </Link>
+                <Link to='/home?facet=podcasts-chip'>
+                    <Checkbox checked={isChecked('podcasts-chip')} id='podcasts' label='Podcasts' />
+                </Link>
             </div>
-        </div>
+
+            <span>
+
+            </span>
+        </section>
     );
 }
 

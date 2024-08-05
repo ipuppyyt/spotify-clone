@@ -1,0 +1,24 @@
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+}
+
+.checkbox {
+    display: none; /* Hide the default checkbox */
+}
+
+.checkbox-label {
+    padding: 5px 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    border-radius: 25px; /* Rounded corners */
+    color: white; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.checkbox:checked + .checkbox-label {
+    background-color: white; /* Background color when checked */
+    color: black; /* Text color when checked */
+    border-color: #0056b3; /* Darker border when checked */
+}

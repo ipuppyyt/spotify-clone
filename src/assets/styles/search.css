@@ -1,0 +1,50 @@
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: rgba(61, 61, 61, 0.4); /* Background color for the search box */
+  border-radius: 25px; /* Fully rounded edges */
+  padding: 5px 10px;
+  background-color: ;
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  transition: background-color 0.2s; /* Smooth transition on hover */
+}
+
+.search-box:hover {
+  background-color: rgba(
+    61,
+    61,
+    61,
+    0.8
+  ); /* Change background color on hover */
+}
+
+.search-icon {
+  margin-right: 10px; /* Space between icon and input */
+}
+
+.search-input {
+  border: none;
+  background: none;
+  outline: none;
+  flex-grow: 1; /* Allow input to take available space */
+  padding: 5px;
+}
+
+.search-input::placeholder {
+  color: rgba(123, 123, 123, 1);
+  font-family: 'Gotham-Light'; /* Change font for placeholder text */
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgba(123, 123, 123, 0.81); /* Color for the clear button */
+  margin-left: 10px; /* Space between input and button */
+}
+
+.clear-button:hover {
+  color: rgba(166, 166, 166, 1); /* Change color on hover */
+}
