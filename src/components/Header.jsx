@@ -92,7 +92,9 @@ const Header = () => {
 
                             <Divider sx={{ marginY: '5px', backgroundColor: '#8a8a8a' }} />
 
-                            <button className='flex items-center justify-between hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2' onClick={() => logout()}>
+                            <button className='flex items-center justify-between hover:bg-neutral-700 transition-all ease-in-out duration-150 py-2 w-full px-2' onClick={() => logout(
+                                { returnTo: window.location.origin }
+                            )}>
                                 <span>Log out</span>
                             </button>
                         </div>
