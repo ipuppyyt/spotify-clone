@@ -5,6 +5,8 @@ import FavouriteIcon from "./FavouriteIcon";
 import BackIcon from "./BackIcon";
 import BellIcon from "./BellIcon";
 import NewTabIcon from "./NewTabIcon";
+import PlayIcon from "./PlayIcon";
+import PauseIcon from "./PauseIcon";
 
 export {
     HomeIcon,
@@ -13,5 +15,7 @@ export {
     FavouriteIcon,
     BackIcon,
     BellIcon,
-    NewTabIcon
+    NewTabIcon,
+    PlayIcon,
+    PauseIcon
 };

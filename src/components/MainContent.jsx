@@ -1,6 +1,6 @@
 // components/MainContent.jsx
 import React, { useEffect, useState } from 'react';
-import { Checkbox } from '../ui';
+import { Checkbox, SideIconCard } from '../ui';
 import { Link, useLocation } from 'react-router-dom';
 import Header from './Header';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -36,9 +36,9 @@ function MainContent() {
                 </Link>
             </div>
 
-            <span>
-
-            </span>
+            <div>
+                <SideIconCard />
+            </div>
         </section>
     );
 }
